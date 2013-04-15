@@ -133,7 +133,7 @@ button {width: auto; overflow: visible;}
 /* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
 body {
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-line-height: 30px;
+line-height: 28px;
 background-color: #D1D3D4;
 }
 
@@ -151,6 +151,8 @@ h1 {
 font-size:55px;
 font-family: "Sanchez", Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
 }
+
+
 
 h2 {
 font-size: 16px;
@@ -178,6 +180,11 @@ padding-top: 20px;
 min-height: 100%;
 }
 
+@-moz-document url-prefix() {
+     .wrapper {width:700px;}
+}
+
+
 .content {
 position: relative;
 width: 100%;
@@ -194,8 +201,12 @@ float: left;
 */
 
 .asterisk {
-margin-left: 280px;
+margin-left: 300px;
 margin-bottom: 30px;
+}
+
+@-moz-document url-prefix() {
+     .asterisk {margin-left:320px;}
 }
 
 .tagline {
@@ -211,11 +222,19 @@ margin: 5px 0px;
 color: white;
 display: inline-block;
 clear: both;
-text-align: right;
+text-align: center;
 }
 
 #toptag {
-padding-left: 30px;
+padding-left: 40px;
+}
+
+@-moz-document url-prefix() {
+     #toptag {padding-left: 55px;}
+}
+
+#bottomtag {
+padding-left: 10px;
 }
 
  /* 
@@ -242,13 +261,18 @@ color: white;
 position: relative;
 margin-top: 15px;
 text-align: center;
+line-height: 28px;
 }
 
 .signup {
 position: relative;
 margin-top: 45px;
-margin-left: 160px;
+margin-left: 145px;
 margin-bottom: 35px;
+}
+
+@-moz-document url-prefix() {
+     .signup {margin-left: 170px;}
 }
 
 footer {
@@ -262,16 +286,31 @@ height: 50px;
 padding-top: 10px;
 }
 
+#email {
+margin-left: 77px;
+margin-top: 10px;
+}
+
+@-moz-document url-prefix() {
+     #email {margin-left: 85px;}
+}
+
 .signup email {
 border: 0px;
 }
 
-button.join {
+
+input#mc-embedded-subscribe.button{
 margin-top: 5px;
-padding: 10px 121px;
+padding: 7px 85px;
 background: #F7941E;
 color: #FFF;
 border: 0px;
+font-size: 12px;
+}
+
+@-moz-document url-prefix() {
+     input#mc-embedded-subscribe.button {padding: 6px 66px;}
 }
 
 button.join:active {
@@ -280,7 +319,7 @@ background: #E0E77B;
 
 .sm {
 float: left;
-margin-left: 147px;
+margin-left: 110px;
 }
 
 .sm a {
