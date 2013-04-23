@@ -133,7 +133,8 @@ button {width: auto; overflow: visible;}
 /* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
 body {
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-line-height: 28px;
+font-size: 14px;
+line-height: 20px;
 background-color: #D1D3D4;
 }
 
@@ -142,13 +143,13 @@ background-color: #D1D3D4;
 	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
 
 /* we like off-black for text */
-body, select, input, textarea {color: #666;}
+body, select, input, textarea {color: black;}
 
-a {color: #F7941E; text-decoration: none; font-weight: 600; }
+a {color: #ffffff; text-decoration: none; font-weight: 800; }
 a:hover {color: #E3F277;}
 
 h1 {
-font-size:55px;
+font-size:45px;
 font-family: "Sanchez", Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -157,6 +158,7 @@ font-family: "Sanchez", Rockwell, "Courier Bold", Courier, Georgia, Times, "Time
 h2 {
 font-size: 16px;
 font-family: "Sanchez",Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+margin-bottom: 10px;
 }
 
 
@@ -169,6 +171,45 @@ a:link {-webkit-tap-highlight-color: #fcd700;}
 
 ins {background-color: #fcd700; color: #000; text-decoration: none;}
 mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+
+/* Top Bar */
+.topbar {
+
+    font-size: 11px;
+    background: black;
+    text-transform: uppercase;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+    padding: 10px 0px;
+    padding-top: 20px;
+}
+.topbar a {
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    color: #F7941E;
+    display: inline-block;
+    text-decoration: none;
+}
+.topbar a:hover {
+    opacity: .75;
+}
+.topbar span.right{
+    float: right;
+    margin-right: 20px;
+    display: inline;
+}
+.topbar span.right a{
+    float: left;
+    display: block;
+}
+
+
+/* Top Bar */
 
 
 
@@ -185,6 +226,21 @@ min-height: 100%;
 }
 
 
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .content {
 position: relative;
 width: 100%;
@@ -200,24 +256,35 @@ float: left;
 }
 */
 
-.asterisk {
-margin-left: 300px;
-margin-bottom: 30px;
+
+.inner {
+	z-index: 50;
+	margin-top: 20px;
+	margin-left: 68px;
+	padding: 20px 20px 30px 20px;
+	text-align: center;
+	background-color: #F7941E;
+	width: 445px;
+	color: white;
 }
 
-@-moz-document url-prefix() {
-     .asterisk {margin-left:320px;}
+
+#rect {
+display: none;
 }
+
 
 .tagline {
+z-index: 20;
 position: relative;
-margin-top: 20px;
+margin-top: 115px;
+margin-left: 35px;
 }
 
 .tagline h1 {
 background-color: #4FB2C9;
 padding: 5px 20px 0px;
-line-height: 75px;
+line-height: 55px;
 margin: 5px 0px;
 color: white;
 display: inline-block;
@@ -225,12 +292,49 @@ clear: both;
 text-align: center;
 }
 
+#twit {
+
+margin-left: 70px;
+margin-top: 20px;
+}
+
+@-moz-document url-prefix() {
+#twit {
+margin-left: 10px;
+margin-top: 10px;
+}
+
+.inner {
+margin-left: 60px;
+}
+}
+
+.twtr-hd, .twtr-ft
+{
+display: none;
+}
+.twtr-widget .twtr-tweet {
+border:none!important;
+text-align:left;
+font-family: Tahoma, Geneva, sans-serif;
+font-size:16px;
+}
+
+.twtr-timeline {
+z-index: 5;
+padding: 20px 25px;
+border: none;
+
+}
+
 #toptag {
 padding-left: 40px;
 }
 
 @-moz-document url-prefix() {
-     #toptag {padding-left: 55px;}
+     #toptag {padding-left: 38px;}
+     .tagline {margin-left: 51px;}
+     #twit {margin-left: 50px;}
 }
 
 #bottomtag {
@@ -257,23 +361,7 @@ color: white;
 
 */
 
-.description {
-position: relative;
-margin-top: 15px;
-text-align: center;
-line-height: 28px;
-}
 
-.signup {
-position: relative;
-margin-top: 45px;
-margin-left: 145px;
-margin-bottom: 35px;
-}
-
-@-moz-document url-prefix() {
-     .signup {margin-left: 170px;}
-}
 
 footer {
 font-size: 12px;
@@ -286,31 +374,38 @@ height: 50px;
 padding-top: 10px;
 }
 
-#email {
-margin-left: 77px;
-margin-top: 10px;
-}
 
 @-moz-document url-prefix() {
-     #email {margin-left: 85px;}
+     #email {margin-left: 65px;}
 }
 
 .signup email {
 border: 0px;
 }
 
-
+input#mce-EMAIL.email{
+float: left;
+margin-left: 90px;
+}
+	
 input#mc-embedded-subscribe.button{
-margin-top: 5px;
-padding: 7px 85px;
-background: #F7941E;
-color: #FFF;
+background: white;
+color: #F7941E;
 border: 0px;
 font-size: 12px;
+margin-left: -80px;
+}
+
+input#mc-embedded-subscribe.button:hover{
+background: #F7941E;
+color: white;
+border: 1px solid white;
 }
 
 @-moz-document url-prefix() {
-     input#mc-embedded-subscribe.button {padding: 6px 66px;}
+	input#mc-embedded-subscribe.button{margin-left: -105px;}
+     h1 {font-weight: 300;}
+     h2 {font-weight: 300;}
 }
 
 button.join:active {
@@ -334,10 +429,14 @@ margin: 20px 20px
 
 }
 
-html, body {
-    height: 100%;
-}
 
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
 
 
 
@@ -356,16 +455,122 @@ html, body {
 -------------------------------------------------------------------------------*/
 
 /* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
+
+@media screen 
+and (min-width : 320px) 
+and (max-width: 480px) {
+
+	.wrapper {
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
 	
+	.content {
+		width: auto;
+		float: none;
+		margin: 20px 0;
+	}
+
+	.description {
+		width: auto;
+		float: none;
+		margin: -280px 30px;
+		text-align: left;
 		
-}
-
-@media all and (orientation: portrait) {
+	}
 	
-}
-
-@media all and (orientation: landscape) {
+	.tagline {
+		width: auto;
+		float: none;
+		margin: 20px 0;
+	}
 	
+	.signup{
+		width: auto;
+		margin-left: 20px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	
+	#email {
+	margin-left: 10px;
+	margin-top: 10px;
+}
+	
+	#circle {
+		display: none;
+	}
+	#circle2 {
+		display: none;
+	}
+	
+	#twit{
+	margin-left: 0px;
+	background-color: white;
+	}
+	
+	.twtr-widget .twtr-tweet {
+		font-size:14px;
+		}
+
+	.twtr-timeline {
+		padding: 10px 25px;
+		border: none;
+		background-color: none;
+		
+		}
+	
+	
+	.inner {
+		width: auto;
+		padding: 20px 20px;
+		margin-left: 0px;
+		margin-top: -15px;
+	}
+	
+	.description {
+		display: none;
+	}
+	
+	#toptag {
+		padding-left: 0px;
+		margin-top: 75px;
+	}
+
+	@-moz-document url-prefix() {
+    	 #toptag {padding-left: 0x;}
+	}
+
+	#bottomtag {
+	padding-left: 0px;
+	}
+	
+	html {
+	font size: 14px;
+	}
+
+	h1 {
+		font-size:25px;
+		font-family: "Sanchez", Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+	}
+	
+	h2 {
+		font-size: 16px;
+		font-family: "Sanchez",Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
 }
 
+	input#mc-embedded-subscribe.button {
+		width: 100%;
+		height: 50px;
+		margin-left: 0px;
+		
+	}
+	
+	input#mce-EMAIL.email{
+		margin-bottom: 5px;
+		width: 97%;
+		margin-left: 0px;
+	}
+
+}

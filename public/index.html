@@ -1,22 +1,5 @@
 <!doctype html>
 
-<!--Begin Google Analytics snippet -->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-40078946-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-<!--Finish Google Analytics snippet -->
-
 <!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
@@ -76,8 +59,22 @@
 </head>
 
 <body>
+<img src="images/new-york-madness.jpeg" class="bg">
+
+
+<!-- Top bar -->
+	<div class="topbar">
+        <span class="right">
+            	<img src="images/NDB_logo.png" width="85px" style="float: left; margin-left: 20px;">
+				<a href="http://nextdaybetternyc.eventbrite.com/" target="_blank"><img src="images/EB_AB_Logo.png" width="75px" style="margin-left:15px;"></a>
+				<a href="https://twitter.com/nextdaybetter" target="_blank"><img src="images/twitter.png" width="35px" style="margin-left:0px; margin-right: 10px;"></a>
+    	</span>
+        <div class="clr"></div>
+    </div>
+<!--Top bar -->
 
 <div class="wrapper">
+
 
 	<header>		
 	</header>
@@ -86,66 +83,77 @@
 		
 		<!-- <div class="left"> -->
 			<div class="tagline">
-				<img class="asterisk" src="images/asterisk.png" width="50px">
 				<div id="toptag">
 					<h1 class="toptag">How Do You Make</h1><br>
 				</div>
 				<div id="bottomtag">
 					<h1>the Next Day Better?</h1>
 				</div>
-			</div>
-			<div class="description">
-				<p>Geniuses are big thinkers and doers. 
-					This is an online platform that <br>spreads 
-					their ideas and actions that make 
-					the Next Day Better. <br>See them yourself at
-					the <a href="http://nextdaybetternyc.eventbrite.com/" target="_blank">NextDayBetter NYC Event on May 8, 2013</a>.</p>
-			</div>
-			<div class="signup">
-				<div class="ques">
-					<h2>Are you ready? Sign up and stay updated!</h2>
+			<div id="twit">
+				<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+					new TWTR.Widget({
+  					version: 2,
+  					type: 'search',
+  					search: '#NDBetter',
+  					rpp: 1,
+  					interval: 5000,
+  					title: 'Latest Tweets',
+  					subject: '',
+ 					 width: 400,
+  					height: 50,
+  					theme: {
+   					 shell: {
+      				background: 'none',
+      				color: '#ffffff'
+    				},
+    				tweets: {
+     				 background: 'rgba(255,255,255,0.85)',
+      				color: '#000000',
+      				links: '#F7941E'
+    				}
+ 					 },
+ 					 features: {
+   					 scrollbar: false,
+  					  loop: true,
+  					  live: false,
+  					  hashtags: true,
+  					  timestamp: true,
+ 					   avatars: false,
+ 					   toptweets: true,
+  					  behavior: 'all'
+  					}
+					}).render().start();
+					</script>
 				</div>
-				<div id="email">
-					<!-- 
-					<input type="email" name="email" placeholder="you@email.com" size="25" style="margin-left: 20px;"><br>
-					<input type="text" name="fname" placeholder="first name" size="10">
-					<input type="text" name="lname" placeholder="last name" size="10"><br>
-					<button type="button" class="join" style="margin-left: 20px;">JOIN</button><br> -->
-					<!-- Begin MailChimp Signup Form -->
-						<div id="mc_embed_signup">
-							<form action="http://nextdaybetter.us5.list-manage.com/subscribe/post?u=8a6e946a7e145b9c09d67ca4b&amp;id=a4bfad37e8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="your@email.com" required>
-							<div class="clear"><input type="submit" value="SIGN-UP" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-							</form>
-						</div>
-					<!--End mc_embed_signup-->
 				</div>
+			<!--
+			<div id="circle">				
 			</div>
-			<div class="sm">
-				<img src="images/NDB_templogo.png" width="75px" style="float: left;">
-				<div class="vertical"></div>
-				<a href="http://nextdaybetternyc.eventbrite.com/" target="_blank"><img src="images/EB_AB_Logo.png" width="75px" style="float: left; margin-top: 35px;"></a>
-				<div class="vertical"></div>
-				<a href="https://twitter.com/nextdaybetter" target="_blank"><img src="images/twitter.png" width="35px" style="margin-top: 35px; float: left;"></a>
-				<div class="vertical"></div>
-				<div style="margin-top: 33px; float: left;"><a href="/internship.html">JOIN THE TEAM</a></div>
-			</div>
-			
-		<!-- </div>	-->
-		<!-- VIDEO PLACEHOLDER 
-		<div class="right">
-			<div class="tempvideo">
-				<p>VIDEO WILL BE HERE</p>
-			</div>	
+			-->
 		</div>
-		-->
-	</div>
-	
+			
+				<div class="inner">
+					
+					<p>Geniuses are big thinkers and doers. 
+					This is an online platform that spreads 
+					their ideas and actions that make 
+					the Next Day Better. See them yourself at
+					the <a href="http://nextdaybetternyc.eventbrite.com/" target="_blank">NextDayBetter Launch on May 8, 2013</a>.</p>
+					<Br>
+					<h2>Are you ready? Sign up & stay updated!</h2>
+					<div id="mc_embed_signup">
+						<form action="http://nextdaybetter.us5.list-manage.com/subscribe/post?u=8a6e946a7e145b9c09d67ca4b&amp;id=a4bfad37e8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="your@email.com" required>
+						<div class="clear"><input type="submit" value="SIGN-UP" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+						</form>
+					</div>
+				
+			</div>
+		</div>
+
 </div>
-<footer>		
-	<p><small>&copy; Copyright NextDayBetter 2013. All Rights Reserved.</small></p>
-</footer>
-	
+			
 
 
 
